@@ -1,0 +1,38 @@
+<h3><a href="https://themes.envytheme.com/stike/service/social-media-marketing/">Social Media Marketing</a></h3>
+
+
+<div class="content">
+                                            <h3><a href="https://themes.envytheme.com/stike/service/social-media-marketing/">Social Media Marketing</a></h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+
+                                                                                            <a href="https://themes.envytheme.com/stike/service/social-media-marketing/" class="read-more-btn">Read More <i class="bx bx-right-arrow-alt"></i></a>
+                                                                                    </div>
+
+       .section-title.text-left {
+        text-align: center !important;
+        max-width: 100%;
+    }
+.section-title.text-left {
+    max-width: 576px;
+    margin-left: 0;
+    margin-right: 0;
+}
+    .section-title {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+.section-title {
+    text-align: center;
+    max-width: 575px;
+    margin-left: auto;
+    margin-bottom: 60px;
+    margin-right: auto;
+}
+.text-left {
+    text-align: left !important;
+}
+
+Today Work Status - S.Praveen kumar(22-11-24)
+1.Create new Design of Braininsight Template
