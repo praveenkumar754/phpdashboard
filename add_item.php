@@ -34,16 +34,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (move_uploaded_file($image['tmp_name'], $image_path)) {
         $sql = "INSERT INTO items (user_id, title, description, image_path) 
-                VALUES ('$user_id', '$title', '$description', '$image_path')";
-        if ($conn->query($sql)) {
-            header("Location: view_items.php");
-            exit();
-        } else {
-            echo "Error: " . $conn->error;
-        }
-    } else {
-        echo "Failed to upload image. Ensure the 'uploads' directory exists and is writable.";
-    }
+        VALUES ('$user_id', '$title', '$description', '$image_path')";
+if ($conn->query($sql)) {
+    header("Location: view_items.php");
+    exit();
+} else {
+    echo "Error: " . $conn->error;
+}
+} else {
+echo "Failed to upload image. Ensure the 'uploads' directory exists and is writable.";
+}
 }
 
 $conn->close();

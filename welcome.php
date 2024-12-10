@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start();  // Corrected function name
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();
@@ -53,7 +53,6 @@ $conn->close();
                 <li><a href="about_us.php">About Us</a></li>
                 <li><a href="services.php">Services</a></li>
                 <li><a href="contact.php">Contact</a></li>
-              
             </ul>
         </nav>
         <div class="settings">
@@ -62,15 +61,13 @@ $conn->close();
                 <a href="update_profile.php">Update Profile</a>
             </div>
         </div>
-    </header>
+        </header>
     <main>
         <h1>Welcome, <?php echo $name; ?>!</h1>
         <p>Email: <?php echo $email; ?></p>
         <p>Phone: <?php echo $phone; ?></p>
         
         <button id="view-items-btn" class="all-btn">All Pages</button>
-
-
         <button id="add-btn" style="margin-top:20px;">➕ Add</button>
         <div id="add-form" style="display: none;">
             <h2>Add New Item</h2>
@@ -80,8 +77,8 @@ $conn->close();
                 <input type="file" name="image" required>
                 <button type="submit">Submit</button>
                 <div class="cancel-btn">
-                <button type="button" id="cancel-btn" style="background-color: red; color: white; ">Cancel</button>
-            </div>
+                    <button type="button" id="cancel-btn" style="background-color: red; color: white;">Cancel</button>
+                </div>
             </form>
         </div>
     </main>
@@ -104,9 +101,11 @@ $conn->close();
             form.style.display = 'none';
             window.location.href = 'welcome.php'; // Redirect to welcome.php
         });
+
+        // View items button
         document.getElementById('view-items-btn').addEventListener('click', function() {
-        window.location.href = 'view_items.php';
-    });
+            window.location.href = 'view_items.php';
+        });
     </script>
 </body>
 </html>

@@ -16,8 +16,11 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// SQL query to select items for the logged-in user and order them by title (ascending)
-$sql = "SELECT * FROM items WHERE user_id='" . $_SESSION['user_id'] . "' ORDER BY title ASC";
+// Get user_id from the session
+$user_id = $_SESSION['user_id'];
+
+// SQL query to select items for the logged-in user based on user_id
+$sql = "SELECT * FROM items WHERE user_id='$user_id' ORDER BY title ASC";
 $result = $conn->query($sql);
 ?>
 
@@ -29,7 +32,9 @@ $result = $conn->query($sql);
     <title>My Items</title>
 </head>
 <body>
-    <h1>My Items</h1>
+    <h1>Welcome, User!</h1>
+    
+    <h2>My Items</h2>
     <?php if ($result->num_rows > 0): ?>
         <ol>
             <?php while ($row = $result->fetch_assoc()): ?>
@@ -43,6 +48,11 @@ $result = $conn->query($sql);
     <?php else: ?>
         <p>No items found.</p>
     <?php endif; ?>
-    <a href="welcome.php">Back</a>
+    
+    <a href="welcome.php">Back to Welcome Page</a>
 </body>
 </html>
+
+<?php
+$conn->close();
+?>

@@ -49,5 +49,10 @@ $conn->close();
         <input type="password" name="password" placeholder="Password" required>
         <button type="submit">Login</button>
     </form>
+    <script>
+
+
+
+    </script>
 </body>
 </html>
